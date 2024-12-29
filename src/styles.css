@@ -1,37 +1,127 @@
 /*CSS Reset*/
 *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  
-  * {
-    margin: 0;
-  }
-  
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  
-  input, button, textarea, select {
-    font: inherit;
-  }
-  
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  
-  p {
-    text-wrap: pretty;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    text-wrap: balance;
-  }
+  box-sizing: border-box;
+}
 
-  #root, #__next {
-    isolation: isolate;
-  }
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+/*END OF RESET*/
+
+* {
+  color: white;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.782);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.dropdown {
+  position: relative;
+}
+
+.select {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 20px;
+  padding-right: 10px;
+  background-color: rgb(0, 165, 110);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 0.3rem;
+}
+
+.select:hover {
+  background-color: rgb(0, 188, 125);
+  transition: 0.3s;
+}
+
+img {
+  height: 30px;
+  filter: invert(1);
+  transition: transform 0.3s ease;
+  transform: rotate(0deg);
+}
+
+img.clicked {
+  transform: rotate(180deg);
+
+}
+
+.select, ul {
+  user-select: none;
+}
+
+ul {
+  list-style-type: none;
+  background-color: rgb(0, 79, 53);
+  padding-left: 0px;
+}
+
+li {
+  border-radius: 0.3rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  cursor: pointer;
+  width: 196px;
+}
+
+li:hover {
+  background-color: rgb(0, 165, 110);
+}
+
+.active {
+  background-color: rgb(0, 121, 81);
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.displayed {
+  display: block;
+}
